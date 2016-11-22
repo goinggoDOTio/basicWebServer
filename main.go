@@ -12,9 +12,9 @@ func helloWorld(w http.ResponseWriter, req *http.Request) {
 
 func main() {
 	http.HandleFunc("/", helloWorld)
+	fmt.Println("Listening on http://localhost:3000/")
 	err := http.ListenAndServe("localhost:3000", nil)
 	if err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
-	fmt.Println("Listening on http://localhost:3000/")
 }
