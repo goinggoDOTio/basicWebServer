@@ -8,7 +8,20 @@ import (
 	"regexp"
 )
 
+// TestType blah blah blah
+type TestType struct {
+	id   string `json:"id"`
+	name string `json:"name"`
+}
+
+func name(params) {
+	fmt.Println("")
+}
+
+func name(params) {}
+
 func handler(w http.ResponseWriter, r *http.Request) {
+
 	re := regexp.MustCompile("^*(.+)@golang.org$")
 	path := r.URL.Path[1:]
 	match := re.FindAllStringSubmatch(path, -1)
